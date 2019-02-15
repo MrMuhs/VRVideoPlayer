@@ -226,80 +226,76 @@ namespace VRVideoPlayer
         {
             if(e.KeyboardData.VirtualCode == Keys.Up.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED UP");
                 playlist.ElementAt(playlistIndex).y++;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Down.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED DOWN");
                 playlist.ElementAt(playlistIndex).y--;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Left.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED LEFT");
                 playlist.ElementAt(playlistIndex).x--;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Right.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED RIGHT");
                 playlist.ElementAt(playlistIndex).x++;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Q.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED Q");
                 playlist.ElementAt(playlistIndex).w++;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.A.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED A");
                 playlist.ElementAt(playlistIndex).w--;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.W.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED W");
                 playlist.ElementAt(playlistIndex).h++;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.S.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED S");
                 playlist.ElementAt(playlistIndex).h--;
                 alignPlayer();
                 showPlaylist();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Escape.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED Escape");
                 storePlaylist();
                 Close();
             }
             else if (e.KeyboardData.VirtualCode == Keys.X.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED X");
-                playPrevious();
+                playNext();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Y.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED Y");
-                playNext();
+                playPrevious();
             }
             else if (e.KeyboardData.VirtualCode == Keys.Space.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
-                //Console.WriteLine("PRESSED Space");
                 player.togglePlayPause();
+            }
+            else if (e.KeyboardData.VirtualCode == Keys.N.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
+            {
+                player.backwards30s();
+            }
+            else if (e.KeyboardData.VirtualCode == Keys.M.GetHashCode() && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
+            {
+                player.forwards30s();
             }
         }
 

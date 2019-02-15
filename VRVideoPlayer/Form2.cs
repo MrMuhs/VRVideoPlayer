@@ -54,6 +54,18 @@ namespace VRVideoPlayer
             }
         }
 
+        public void forwards30s()
+        {
+            double newPos = axWindowsMediaPlayer1.Ctlcontrols.currentPosition + 30.0;
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = newPos;
+        }
+
+        public void backwards30s()
+        {
+            double newPos = axWindowsMediaPlayer1.Ctlcontrols.currentPosition - 30.0;
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = (newPos < 0 ? 0 : newPos);
+        }
+
         private void Form2_SizeChanged(object sender, EventArgs e)
         {
             Console.WriteLine("Form2_SizeChanged");

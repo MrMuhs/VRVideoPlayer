@@ -67,12 +67,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(713, 360);
+            this.label1.Location = new System.Drawing.Point(713, 334);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 78);
+            this.label1.Size = new System.Drawing.Size(198, 104);
             this.label1.TabIndex = 6;
             this.label1.Text = "Key Controls:\r\nLeft, Right, Up, Down - Window Position\r\nQ / A - Window width\r\nW /" +
-    " S - Window height\r\nX - Play previous\r\nY - Play Next";
+    " S - Window height\r\nY - Play previous\r\nX - Play Next\r\nN - 30s back\r\nM - 30s forw" +
+    "ard";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
